@@ -18,7 +18,7 @@ int main(){
     // bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(40, 0);
     // bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(-40, 0);
 
-    bn::vector<bn::sprite_ptr, 128> circles = {};
+    bn::vector<bn::sprite_ptr, 96> circles = {};
     // for (int x = -40; x <= 40; x += 10){
     //     bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
     //     BN_LOG("x value", x);
