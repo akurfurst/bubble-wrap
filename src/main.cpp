@@ -32,6 +32,17 @@ int main(){
             sprites++;
         }
     }
+    circles[0].set_scale(1.8);
+    circles[1].set_scale(0.5);
+    circles[39].set_horizontal_scale(2.0);
+    circles[47].set_vertical_scale(3.0);
+    circles[55].set_shear(0.5);
+    circles[63].set_shear(0.5);
+    //circles[55].set_rotation_angle(90);
+    int angle1 = 0;
+    int angle2 = 0;
+    int angle3 = 0;
+    int angle4 = 0;
 
     BN_LOG(sprites);
     while(true){
@@ -48,6 +59,31 @@ int main(){
         }
         else{
             bn::backdrop::set_color(bn::color(20, 20, 31));
+        }
+        circles[39].set_rotation_angle(angle1);
+        angle1++;
+        if(angle1 > 360){
+            angle1 = 0;
+        }
+
+        circles[47].set_rotation_angle(angle2);
+        angle2+= 4;
+        if (angle2 > 360)
+        {
+            angle2 = 0;
+        }
+
+        circles[55].set_rotation_angle(angle3);
+        angle3+= 8;
+        if(angle3 > 360){
+            angle3 = 0;
+        }
+
+        circles[63].set_rotation_angle(angle4);
+        angle4 += 32;
+        if (angle4 > 360)
+        {
+            angle4 = 0;
         }
 
         bn::core::update();
